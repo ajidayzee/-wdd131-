@@ -1,79 +1,56 @@
-/* General Styles */
 body {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto auto;
-    height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-header {
-    grid-area: header;
+header, footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 1em;
+    padding: 1em 0;
 }
 
 nav {
-    grid-area: nav;
-    background-color: #000;
+    background-color: black;
+    color: white;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    padding: 1em;
-    display: block;
+}
+
+.content {
+    display: flex;
+    background-color: #d3d3d3;
 }
 
 main {
-    grid-area: main;
-    background-color: #ccc;
-    padding: 1em;
+    flex: 3;
+    padding: 20px;
 }
 
 aside {
-    grid-area: aside;
-    background-color: #fff;
-    padding: 1em;
+    flex: 1;
+    background-color: white;
+    padding: 20px;
 }
 
 footer {
-    grid-area: footer;
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 1em;
-}
-
-/* Grid Layout for larger screens */
-@media (min-width: 768px) {
-    body {
-        grid-template-areas:
-            "header header"
-            "nav nav"
-            "main aside"
-            "footer footer";
-        grid-template-columns: 3fr 1fr;
-    }
+    padding: 1em 0;
 }
